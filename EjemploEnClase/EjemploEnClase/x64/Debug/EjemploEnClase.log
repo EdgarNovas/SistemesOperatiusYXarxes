@@ -1,1 +1,2 @@
-﻿LINK : fatal error LNK1104: cannot open file 'C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\x64\Debug\EjemploEnClase.exe'
+﻿  InputSystem.cpp
+  EjemploEnClase.vcxproj -> C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\x64\Debug\EjemploEnClase.exe
