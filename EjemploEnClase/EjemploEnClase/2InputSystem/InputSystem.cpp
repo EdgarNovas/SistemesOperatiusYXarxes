@@ -1,4 +1,5 @@
 #include "InputSystem.h"
+#include"../Utils/ConsoleControl.h"
 
 InputSystem::KeyBinding::KeyBinding(int key, OnKeyPress onKeyPress)
 {
@@ -71,6 +72,18 @@ void InputSystem::RemoveAndDeleteListener(KeyBinding* keyBinding)
 
 }
 
+void InputSystem::AddListenerAsync(int key, KeyBinding::OnKeyPress onKeyPress)
+{
+	std::thread* addListenerThread = new std::thread(&InputSystem::AddListener,this,key,onKeyPress);
+	addListenerThread->detach();
+}
+
+void InputSystem::RemoveAndDeleteListenerAsync(KeyBinding* keyBinding)
+{
+	std::thread* removeListenerThread = new std::thread(&InputSystem::RemoveAndDeleteListener, this,keyBinding);
+	removeListenerThread->detach();
+}
+
 void InputSystem::StartListen()
 {
 	_classMutex.lock();
@@ -106,4 +119,57 @@ void InputSystem::StopListen()
 
 	_classMutex.unlock();
 
+}
+
+void InputSystem::ListenLoop()
+{
+	_classMutex.lock();
+	_state = Listening;
+
+	State currentState = _state;
+	CC::Lock();
+	CC::ClearKeyBuffer();
+	CC::Unlock();
+	_classMutex.unlock();
+
+	while (currentState == Listening)
+	{
+		int key = CC::ReadNextKey();
+
+		if (key != 0)
+		{
+			_classMutex.lock();
+			KeyBindingMap::iterator it = _keyBindingsMap.find(key);
+			if (it != _keyBindingsMap.end())
+			{
+				KeyBindingList list = it->second;
+
+				for (KeyBinding* binding : list)
+				{
+					//Si esto te tuvieras que ir a hacer las cosas 
+					//Como el mutex esta bloqueado y luego bloqueamos otra vez
+					//habria un dead lock(muerte por lock)
+					//binding->_onKeyPress();
+					//Con un thread esto no pasara porque el detach
+					// se ejecuta en otro sitio y espera a que acabe
+					std::thread* onkeyPressThread = new std::thread(binding->_onKeyPress);
+					onkeyPressThread->detach();
+				}
+			}
+
+			_classMutex.unlock();
+		}
+		_classMutex.lock();
+		currentState = _state;
+		_classMutex.unlock();
+
+	}
+
+	_classMutex.lock();
+	if (_state == Stopping)
+	{
+		_state = Stopped;
+	}
+
+	_classMutex.unlock();
 }

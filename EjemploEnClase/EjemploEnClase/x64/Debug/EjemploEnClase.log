@@ -1,2 +1,3 @@
-﻿  InputSystem.cpp
+﻿  main.cpp
+C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\EjemploEnClase\Utils\ConsoleControl.h(46,2): warning C4091: 'static ': ignored on left of 'ConsoleControl' when no variable is declared
   EjemploEnClase.vcxproj -> C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\x64\Debug\EjemploEnClase.exe
