@@ -40,6 +40,13 @@ public:
 
 	void RemoveAndDeleteListener(KeyBinding* keyBinding);
 
+
+	void AddListenerAsync(int key, KeyBinding::OnKeyPress onKeyPress);
+
+	void RemoveAndDeleteListenerAsync(KeyBinding* keyBinding);
+
+
+
 	void StartListen();
 	void StopListen();
 
