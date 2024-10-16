@@ -10,6 +10,16 @@ public:
 
 	//NEW P(STD,OK,[]RESPOTES NO OK)
 
+	Question(std::string questions, int realAnswer, std::vector<int> falseAnswers)
+	{
+		AddQuestion(questions,realAnswer,falseAnswers);
+	}
+
+	Question() {
+
+	}
+
+
 	void AddQuestion(std::string questions,int realAnswer ,std::vector<int> falseAnswers)
 	{
 		question = questions;
@@ -36,11 +46,19 @@ private:
 public:
 	void SelectQuestion(int number)
 	{
-
+		if (answers.IsCorrectAnswer(number))
+		{
+			std::cout << "Bieeen acertaste" << std::endl;
+		}
+		else
+		{
+			std::cout << "Fallaste Pajaso de inutil" << std::endl;
+		}
 	}
 
 	void ShowAnswers()
 	{
+		ShowQuestion();
 		int contador = 1;
 		for (int answers : answers.GetAllPossibleAnswers())
 		{
@@ -49,4 +67,8 @@ public:
 		}
 	}
 
+	void ShowQuestion()
+	{
+		std::cout << question << std::endl;
+	}
 };

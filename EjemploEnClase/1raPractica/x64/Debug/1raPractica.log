@@ -1,2 +1,3 @@
 ﻿  main.cpp
+C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\1raPractica\Utils\ConsoleControl.h(46,2): warning C4091: 'static ': ignored on left of 'ConsoleControl' when no variable is declared
   1raPractica.vcxproj -> C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\x64\Debug\1raPractica.exe
