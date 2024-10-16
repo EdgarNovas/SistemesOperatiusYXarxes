@@ -29,16 +29,16 @@ public:
 
 	bool IsCorrectAnswer(int answerChosen)
 	{
-		it = answersAdded.find(answerChosen);
+		it = answersAdded.find(answers[answerChosen]);
+		std::cout << answers[answerChosen] << std:: endl;
 		
+
 		if (it == answersAdded.end())
 		{
-			std::cout << "Key-value pair not present in map"; 
+			std::cout << "Key-value pair not present in map" << std::endl; 
 			return false;
 		}
-		else
-			std::cout << "Key-value pair present : "
-			 << it->second;
+		
 
 		return it->second;
 	}

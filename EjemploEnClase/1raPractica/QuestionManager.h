@@ -5,11 +5,22 @@ class QuestionManager
 {
 	std::vector<Question> questions;
 public:
-	void AddQuestion()
+
+	void ShowAnswers(int i)
 	{
-		
+		questions[i].ShowAnswers();
 	}
 
+	void SelectAnswer(int i, int answer)
+	{
+		questions[i].SelectQuestion(answer);
+	}
+
+
+	void AddQuestionToList(Question question)
+	{
+		questions.push_back(question);
+	}
 	
 
 };

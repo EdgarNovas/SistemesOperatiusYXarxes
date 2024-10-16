@@ -128,11 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Utils\ConsoleControl.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Answers.h" />
     <ClInclude Include="QuestionManager.h" />
     <ClInclude Include="Questions.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="Utils\ConsoleControl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
