@@ -128,14 +128,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="2InputSystem\InputSystem.cpp" />
+    <ClCompile Include="3Nodes\INodeContent.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="3Nodes\Node.cpp" />
+    <ClCompile Include="3Nodes\NodeMap.cpp" />
     <ClCompile Include="Utils\ConsoleControl.cpp" />
+    <ClCompile Include="3Nodes\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="1TutorialThreads\ThreadTutorial.h" />
     <ClInclude Include="2InputSystem\InputsConsts.h" />
     <ClInclude Include="2InputSystem\InputSystem.h" />
+    <ClInclude Include="3Nodes\Node.h" />
+    <ClInclude Include="3Nodes\NodeMap.h" />
+    <ClInclude Include="3Nodes\INodeContent.h" />
     <ClInclude Include="Utils\ConsoleControl.h" />
+    <ClInclude Include="3Nodes\Vector2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

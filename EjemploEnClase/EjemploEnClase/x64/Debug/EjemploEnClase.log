@@ -1,3 +1,7 @@
-﻿  main.cpp
+﻿  Vector2.cpp
+  main.cpp
 C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\EjemploEnClase\Utils\ConsoleControl.h(46,2): warning C4091: 'static ': ignored on left of 'ConsoleControl' when no variable is declared
-  EjemploEnClase.vcxproj -> C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\x64\Debug\EjemploEnClase.exe
+C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\EjemploEnClase\main.cpp(44,4): error C2297: '+=': not valid as right operand has type 'Vector2 *'
+C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\EjemploEnClase\main.cpp(44,4): error C2114: '+=': pointer on left; needs integral value on right
+C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\EjemploEnClase\main.cpp(45,17): error C2110: '+': cannot add two pointers
+  Generating Code...
