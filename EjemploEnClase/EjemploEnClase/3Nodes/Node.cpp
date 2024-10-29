@@ -18,7 +18,7 @@ void Node::DrawContent(Vector2 offset)
 		Vector2 pos = offset + _position;
 		CC::Lock();
 		CC::SetPosition(pos.X, pos.Y);
-		std::cout << " ";
+		std::cout << "a";
 		CC::Unlock();
 		return;
 	}
