@@ -1,3 +1,4 @@
 ﻿  main.cpp
 C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\1raPractica\Utils\ConsoleControl.h(46,2): warning C4091: 'static ': ignored on left of 'ConsoleControl' when no variable is declared
+C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\1raPractica\main.cpp(14,8): warning C4101: 'timer': unreferenced local variable
   1raPractica.vcxproj -> C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\x64\Debug\1raPractica.exe
