@@ -8,7 +8,9 @@
 #include <json/json.h>
 #include <string>
 #include <fstream>
-
+#include "4Json/Banana.h"
+#include "4Json/Manzana.h"
+/*
 class Player
 {
 public:
@@ -57,9 +59,17 @@ Player::Player()
 Player::~Player()
 {
 }
+*/
+//Lo mejor es hacer una template al crear cosas con las factory
+//Factory<Fruit>
+// Not banana
+// Not Manzana
+//Reflection
+// Lee el nombre de la variable y es capaz de escribir y leer solo
+//
 
 int main() {
-	
+	/*
 	Player* player = new Player();
 
 	player->coins = 5;
@@ -129,7 +139,7 @@ int main() {
 	NodeMap nodeMap(size, offset);
 
 	nodeMap.UnSafeDraw();
-	*/
+	
 
 	std::cout << "Finished Write";
 
@@ -156,6 +166,58 @@ int main() {
 	
 	//Vector2 v3 = *v + *v2;
 
+	*/
 
+	
+	
+	
+	std::vector<Fruta*> frutas
+	{
+		new Banana(),
+		new Manzana(),
+		new Banana()
+	};
+
+	Json::Value jsonArray = Json::Value(Json::arrayValue);
+
+	for (Fruta* fruta : frutas)
+	{
+		jsonArray.append(fruta->Code());
+	}
+
+	std::ofstream jsonWriteFile = std::ofstream("FrutastTest.json", std::ifstream::binary);
+
+	if (!jsonWriteFile.fail())
+	{
+		jsonWriteFile << jsonArray;
+		jsonWriteFile.close();
+	}
+
+	std::cout << "Finished Write" << std::endl;
+	/*
+	std::ifstream jsonReadFile = std::ifstream("FrutasTest.json", std::ifstream::binary);
+	std::vector<Fruta*> readFrutas;
+	
+	if (!jsonReadFile.fail())
+	{
+		Json::Value readedJson;
+
+		jsonReadFile >> readedJson;
+		for (Json::Value value : readedJson)
+		{
+			Fruta* f = ICodable::FromJson<Fruta>(value);
+			readFrutas.push_back(f);
+		}
+	}
+	*/
+	std::cout << "Finished Read";
+
+	/*
+	while (true)
+	{
+
+
+	}
+	*/
 
 }
