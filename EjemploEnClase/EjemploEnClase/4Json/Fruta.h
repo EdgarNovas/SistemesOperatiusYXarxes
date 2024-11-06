@@ -1,18 +1,13 @@
 #pragma once
 #include "ICodable.h"
-
 #include <string>
-class Fruta : public ICodable
+class Fruta :	public ICodable
 {
-public: 
-	unsigned int semillas = 0;
+public:
+	unsigned int semillas; 
 	std::string hexColor = "";
 
-
-	// Inherited via ICodable
-	virtual Json::Value Code() override;
-
+	virtual Json::Value Encode() override;
 	virtual void Decode(Json::Value json) override;
-
 };
 

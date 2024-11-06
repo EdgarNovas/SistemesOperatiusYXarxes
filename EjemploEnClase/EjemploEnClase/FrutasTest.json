@@ -1,0 +1,20 @@
+[
+	{
+		"ICodableType" : "class Banana",
+		"hexColor" : "",
+		"semillas" : 0,
+		"sex" : 1
+	},
+	{
+		"ICodableType" : "class Manzana",
+		"hexColor" : "",
+		"isPoisoned" : false,
+		"semillas" : 0
+	},
+	{
+		"ICodableType" : "class Banana",
+		"hexColor" : "",
+		"semillas" : 0,
+		"sex" : 1
+	}
+]

@@ -1,6 +1,6 @@
-#include "Fruta.h"
+	#include "Fruta.h"
 
-Json::Value Fruta::Code()
+Json::Value Fruta::Encode()
 {
 	Json::Value json = Json::Value();
 
@@ -14,5 +14,4 @@ void Fruta::Decode(Json::Value json)
 {
 	semillas = json["semillas"].asUInt();
 	hexColor = json["hexColor"].asString();
-
 }

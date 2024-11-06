@@ -1,10 +1,13 @@
 #include "Manzana.h"
 
-Json::Value Manzana::Code()
+Json::Value Manzana::Encode()
 {
-	Json::Value json = Fruta::Code();
+	Json::Value json = Fruta::Encode();
+
 	json["isPoisoned"] = isPoisoned;
-	json[GetDecodeKey()] = typeid(Manzana).name();
+	//json[GetDecodeKey()] = typeid(Manzana).name();
+	CodeSubClassType<Manzana>(json);
+
 	return json;
 }
 
