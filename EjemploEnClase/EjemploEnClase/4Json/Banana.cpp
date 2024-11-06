@@ -4,7 +4,8 @@ Json::Value Banana::Code()
 {
     Json::Value json = Fruta::Code();
     json["sex"] = sex;
-    json[GetDecodeKey()] = typeid(Banana).name();
+    //json[GetDecodeKey()] = typeid(Banana).name();
+    CodeSubClassType<Banana>(json);
     //<-----
     return json;
 }
