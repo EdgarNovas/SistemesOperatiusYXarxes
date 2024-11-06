@@ -4,8 +4,7 @@ Json::Value Manzana::Code()
 {
 	Json::Value json = Fruta::Code();
 	json["isPoisoned"] = isPoisoned;
-	//json[GetDecodeKey()] = typeid(Manzana).name();
-	CodeSubClassType<Manzana>(json);
+	json[GetDecodeKey()] = typeid(Manzana).name();
 	return json;
 }
 

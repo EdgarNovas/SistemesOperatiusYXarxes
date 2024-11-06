@@ -168,10 +168,8 @@ int main() {
 
 	*/
 
-	ICodable::SaveDecodeProcess<Manzana>();
-	ICodable::SaveDecodeProcess<Banana>();
-	//ICodable::SaveDecodeProcess(typeid(Manzana).name(), []() {return new Manzana(); });
-	//ICodable::SaveDecodeProcess(typeid(Banana).name(), []() {return new Banana(); });
+	
+	
 	
 	std::vector<Fruta*> frutas
 	{
@@ -196,8 +194,8 @@ int main() {
 	}
 
 	std::cout << "Finished Write" << std::endl;
-	
-	std::ifstream jsonReadFile = std::ifstream("FrutastTest.json", std::ifstream::binary);
+	/*
+	std::ifstream jsonReadFile = std::ifstream("FrutasTest.json", std::ifstream::binary);
 	std::vector<Fruta*> readFrutas;
 	
 	if (!jsonReadFile.fail())
@@ -211,7 +209,7 @@ int main() {
 			readFrutas.push_back(f);
 		}
 	}
-	
+	*/
 	std::cout << "Finished Read";
 
 	/*
