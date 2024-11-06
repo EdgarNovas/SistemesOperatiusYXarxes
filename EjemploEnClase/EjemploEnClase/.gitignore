@@ -1,0 +1,79 @@
+# Archivos generados por Visual Studio
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+*.suo
+*.user
+*.cache
+*.pdb
+*.opendb
+*.VC.opendb
+*.VC.db
+
+# Archivos de configuración y temporales
+*.log
+*.tlog
+*.lastbuildstate
+*.idb
+*.ipch
+*.obj
+*.o
+*.ilk
+*.tlb
+*.tlh
+*.tmp
+*.tmp_proj
+
+# Archivos binarios
+*.exe
+*.dll
+*.lib
+*.so
+*.dylib
+*.out
+*.exp
+
+# Carpeta de build de Visual Studio
+[Bb]uild/
+[Bb]in/
+[Dd]ebug*/
+[Rr]elease*/
+x64/
+x86/
+ARM/
+ARM64/
+
+# Archivos de respaldo
+*_i.c
+*_p.c
+*.sbr
+*.pch
+
+# Configuración del sistema
+*.sdf
+*.opensdf
+*.ncb
+*.aps
+*.dbmdl
+*.psess
+*.vsp
+*.vspx
+*.rsuser
+*.sln.docstates
+
+# Archivos generados por Rider
+.idea/
+.idea_modules/
+.idea/workspace.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/caches
+.idea/modules.xml
+.idea/.rider
+
+# Otros archivos innecesarios
+*.log
+*.DS_Store
+Thumbs.db
