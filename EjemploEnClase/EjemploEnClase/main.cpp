@@ -171,52 +171,52 @@ int main() {
 	
 	
 	
-ICodable::SaveDecodeProcess<Manzana>();
-ICodable::SaveDecodeProcess<Banana>();
-//ICodable::SaveDecodeProcess(typeid(Banana).name(), []() {return new Banana(); });
-//ICodable::SaveDecodeProcess(typeid(Banana).name(), []() {return new Banana(); });
+	ICodable::SaveDecodeProcess<Manzana>();
+	ICodable::SaveDecodeProcess<Banana>();
+	//ICodable::SaveDecodeProcess(typeid(Banana).name(), []() {return new Banana(); });
+	//ICodable::SaveDecodeProcess(typeid(Banana).name(), []() {return new Banana(); });
 
-std::vector<Fruta*> frutas{
-	new Banana(),
-	new Manzana(),
-	new Banana(),
-};
+	std::vector<Fruta*> frutas{
+		new Banana(),
+		new Manzana(),
+		new Banana(),
+	};
 
-Json::Value jsonArray = Json::Value(Json::arrayValue);
+	Json::Value jsonArray = Json::Value(Json::arrayValue);
 
-for (Fruta* fruta : frutas)
-{
-	jsonArray.append(fruta->Encode());
-}
-
-std::ofstream* jsonWriteFile = new std::ofstream("FrutasTest.json", std::ifstream::binary);
-
-if (!jsonWriteFile->fail()) {
-
-	*jsonWriteFile << jsonArray; //<- Manera Correcta
-	jsonWriteFile->close();
-	delete jsonWriteFile;
-}
-
-std::cout << "Finished Writing" << std::endl;
-
-std::ifstream* jsonReadFile = new std::ifstream("FrutasTest.json", std::ifstream::binary);
-std::vector<Fruta*> readFrutas;
-
-if (!jsonReadFile->fail()) {
-	Json::Value readedJson;
-	*jsonReadFile >> readedJson;
-
-	for (Json::Value value : readedJson) {
-		Fruta* f = ICodable::FromJson<Fruta>(value);
-		readFrutas.push_back(f);
+	for (Fruta* fruta : frutas)
+	{
+		jsonArray.append(fruta->Encode());
 	}
 
-	jsonReadFile->close();
-	delete jsonReadFile;
-}
+	std::ofstream* jsonWriteFile = new std::ofstream("FrutasTest.json", std::ifstream::binary);
 
-std::cout << "Finished Read" << std::endl;
+	if (!jsonWriteFile->fail()) {
+
+		*jsonWriteFile << jsonArray; //<- Manera Correcta
+		jsonWriteFile->close();
+		delete jsonWriteFile;
+	}
+
+	std::cout << "Finished Writing" << std::endl;
+
+	std::ifstream* jsonReadFile = new std::ifstream("FrutasTest.json", std::ifstream::binary);
+	std::vector<Fruta*> readFrutas;
+
+	if (!jsonReadFile->fail()) {
+		Json::Value readedJson;
+		*jsonReadFile >> readedJson;
+
+		for (Json::Value value : readedJson) {
+			Fruta* f = ICodable::FromJson<Fruta>(value);
+			readFrutas.push_back(f);
+		}
+
+		jsonReadFile->close();
+		delete jsonReadFile;
+	}
+
+	std::cout << "Finished Read" << std::endl;
 
 	/*
 	while (true)
