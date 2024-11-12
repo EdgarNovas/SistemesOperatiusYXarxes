@@ -102,4 +102,10 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="FrutasTest.json" />
+    <None Include="FrutastTest.json" />
+    <None Include="PlayerParseTest.json" />
+  </ItemGroup>
 </Project>

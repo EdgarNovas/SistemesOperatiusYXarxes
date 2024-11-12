@@ -1,9 +1,30 @@
-﻿  Banana.cpp
+﻿  InputSystem.cpp
+D:\ENTI\2n\SistemesXarxes\SistemesOperatiusYXarxes\EjemploEnClase\EjemploEnClase\Utils\ConsoleControl.h(46,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
+  (compilando archivo de origen "2InputSystem/InputSystem.cpp")
+  
+  INodeContent.cpp
+  Banana.cpp
+  jsoncpp.cpp
   Fruta.cpp
   ICodable.cpp
-  Manzana.cpp
   main.cpp
-C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\EjemploEnClase\Utils\ConsoleControl.h(46,2): warning C4091: 'static ': ignored on left of 'ConsoleControl' when no variable is declared
-  Generating Code...
-  LINK : C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\x64\Debug\EjemploEnClase.exe not found or not built by the last incremental link; performing full link
-  EjemploEnClase.vcxproj -> C:\Users\EdgarNovasPaniagua\Documents\SistemesOperatiusYXarxes\EjemploEnClase\x64\Debug\EjemploEnClase.exe
+D:\ENTI\2n\SistemesXarxes\SistemesOperatiusYXarxes\EjemploEnClase\EjemploEnClase\Utils\ConsoleControl.h(46,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
+  (compilando archivo de origen "main.cpp")
+  
+  Node.cpp
+D:\ENTI\2n\SistemesXarxes\SistemesOperatiusYXarxes\EjemploEnClase\EjemploEnClase\Utils\ConsoleControl.h(46,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
+  (compilando archivo de origen "3Nodes/Node.cpp")
+  
+  NodeMap.cpp
+  Manzana.cpp
+  Snake.cpp
+D:\ENTI\2n\SistemesXarxes\SistemesOperatiusYXarxes\EjemploEnClase\EjemploEnClase\Utils\ConsoleControl.h(46,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
+  (compilando archivo de origen "Snake.cpp")
+  
+  ConsoleControl.cpp
+D:\ENTI\2n\SistemesXarxes\SistemesOperatiusYXarxes\EjemploEnClase\EjemploEnClase\Utils\ConsoleControl.h(46,2): warning C4091: 'static ': se ha omitido a la izquierda de 'ConsoleControl' cuando no hay ninguna variable declarada
+  (compilando archivo de origen "Utils/ConsoleControl.cpp")
+  
+  Vector2.cpp
+  Generando código...
+  EjemploEnClase.vcxproj -> D:\ENTI\2n\SistemesXarxes\SistemesOperatiusYXarxes\EjemploEnClase\x64\Debug\EjemploEnClase.exe
